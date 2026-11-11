@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+:root {
+  /* =========================================
+     Paleta de Cores: Sistema Solar
+     ========================================= */
+  --bg-primary: #05070F;   /* Noite de Observatório */
+  --surface: #1C2333;      /* Mar de Titã */
+  --text-main: #E2E8F0;    /* Luz de Lua */
+  --accent-warm: #FF6B35;  /* Laranja Supernova */
+  --accent-cool: #00F0FF;  /* Ciano Orbital */
+
+  /* =========================================
+     Tipografia
+     ========================================= */
+  --font-title: 'Orbitron', sans-serif;
+  --font-subtitle: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* Base Geral da Página */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Títulos principais (H1, H2) */
+h1, h2 {
+  font-family: var(--font-title);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Subtítulos e Seções (H3, H4, Leads) */
+h3, h4, .subtitle {
+  font-family: var(--font-subtitle);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Parágrafos e Corpo do Texto */
+p, span, li {
+  font-family: var(--font-body);
+}
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   font-family: var(--font-body);
+   color: var(--text-main);
+   background-color: var(--bg-primary);
+   font-size: 1em;
+}
+header{
+   background-color: var(--surface);
+   padding: 20px 30px;
+   text-align: center;
+   margin-bottom: 20px;
+   border-bottom: 1px solid var(--accent-warm);
+}
+header h1{
+   font-family: var(--font-title);
+   
+}
+header p{
+   font-style: italic;
+   color: var(--accent-warm);
+}
+#container-principal{
+   margin: 0 20px;
+}
+#container-principal h2{
+   text-align: center;
+   font-family: var(--font-subtitle);
+}
+#box-p{
+   border: 1px solid var(--accent-warm);
+   background-color: var(--surface);
+   padding: 20px;
+   border-radius: 5px;
+   text-align: center;
+   margin-bottom: 20px;
+}
+#box-p p{
+   text-align: center;
+   padding: 10px;
+}
+button{
+  
+   border: 1px solid var(--text-main);
+   background-color: #05070F;
+   color: var(--text-main);
+   padding: 10px 25px;
+   border-radius: 5px;
+   font-weight: bold;
+   font-family: var(--font-title);
+   transition: all 0.3s ease;
+}
+button:hover{
+   color: var(--accent-cool);
+   border: 1px solid var(--accent-cool);
+   background-color: var(--text-main);
+}
+button:active{
+   color: var(--text-main);
+   border: 1px solid var(--text-main);
+   background-color: var(--accent-cool);
+}
+#container-grid{
+  margin: 20px 0;
+   display: grid;
+   gap: 20px;
+   grid-template-columns: 1fr;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   justify-content: center;
+}
+.box-grid{
+   border: 1px solid var(--accent-warm);
+   background-color: var(--surface);
+   border-radius: 5px;
+   padding: 20px;
+   text-align: center;
+   line-height: 1.8;
+   transition: all 0.3s ease;
+}
+.box-grid:hover{
+   transform: translateY(10px);
+}
+
+#grid-contato{
+   display: grid;
+   gap: 20px;
+   grid-template-columns: 1fr;
+   justify-content: center;
+   align-items: center;
+}
+.box-contato{
+    border: 1px solid var(--accent-warm);
+   background-color: var(--surface);
+   border-radius: 5px;
+   padding: 20px;
+   text-align: left;
+   line-height: 1.8;
+}
+#container-principal > #grid-contato > .box-contato > h2{
+   text-align: left;
+   color: var(--accent-cool);
+}
+footer{
+   text-align: center;
+   color: #00F0FF;
+   margin: 20px;
+}
+@media screen and (min-width: 500px) {
+   #container-grid{
+   grid-template-columns: repeat(2, 1fr);
+   
+   }
+}
+@media screen and (min-width: 768px) {
+   #container-grid{
+   grid-template-columns: repeat(3, 1fr);
+   
+   }
+   #grid-contato{
+   grid-template-columns: repeat(2, 1fr);
+   
+   }
+}
+@media screen and (min-width: 992px) {
+   #container-grid{
+   grid-template-columns: repeat(4, 1fr);
+   
+   }
+}
